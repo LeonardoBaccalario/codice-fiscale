@@ -32,7 +32,6 @@ public class codiceFiscale {
 
     public String calcoloCog(){
         String cog= "";
-        int t=0,p=0;
         cognome = cognome.toUpperCase();
 
         for (int i=0; i<cognome.length(); i++){
@@ -62,13 +61,16 @@ public class codiceFiscale {
 
     public String calcoloNome(){
         String nom= "";
-        int t=0,p=0, x=0;
         nome = nome.toUpperCase();
 
         for (int i=0; i<nome.length(); i++){
-            if (nom.length()!= 3 && nome.charAt(i) != 'A' && nome.charAt(i) != 'E' && nome.charAt(i) != 'I' && nome.charAt(i) != 'O' && nome.charAt(i) != 'U') {
+            if (nom.length()!= 4 && nome.charAt(i) != 'A' && nome.charAt(i) != 'E' && nome.charAt(i) != 'I' && nome.charAt(i) != 'O' && nome.charAt(i) != 'U') {
                 nom += nome.charAt(i);
             }
+        }
+
+        if (nom.length()==4){
+            nom = nom.substring(0,1) + nom.substring(1+1);
         }
 
         if (nom.length() != 3) {
