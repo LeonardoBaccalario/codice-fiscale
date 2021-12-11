@@ -9,17 +9,17 @@ public class Main {
         Scanner tastiera = new Scanner(System.in);
         codiceFiscale cod1 = new codiceFiscale();
 
-        System.out.println("inserire comune di nascita");
-        cod1.setComune(tastiera.nextLine());
+        System.out.println("inserire nome");
+        cod1.setNome(tastiera.nextLine());
 
         System.out.println("inserire cognome");
-        cod1.setCognome(tastiera.next());
-
-        System.out.println("inserire nome");
-        cod1.setNome(tastiera.next());
+        cod1.setCognome(tastiera.nextLine());
 
         System.out.println("Inserire sesso (M o F)");
-        cod1.setSesso(tastiera.next());
+        cod1.setSesso(tastiera.nextLine());
+
+        System.out.println("inserire comune di nascita");
+        cod1.setComune(tastiera.nextLine());
 
         System.out.println("inserire giorno di nascita");
         cod1.setGiorno(tastiera.nextInt());
