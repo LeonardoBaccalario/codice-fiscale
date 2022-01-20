@@ -51,7 +51,7 @@ public class codiceFiscale {
 
     public String calcoloCog() {
         String cog = "";
-        cognome = cognome.toUpperCase();
+        cognome = cognome.toUpperCase().replaceAll(" ","");
 
         for (int i = 0; i < cognome.length(); i++) {
             if (cog.length() != 3 && cognome.charAt(i) != 'A' && cognome.charAt(i) != 'E' && cognome.charAt(i) != 'I' && cognome.charAt(i) != 'O' && cognome.charAt(i) != 'U') {
